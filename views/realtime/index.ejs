@@ -1,0 +1,19 @@
+<h2> Test Realtime Data </h2>
+<table>
+	<thead>
+		<tr i6cols style="border : 1px black;">
+			<th i6att="id">ID</th>
+			<th i6att="name">Nama</th>
+			<th i6att="value">Value</th>
+			<th i6att="status">Status</th>
+			<th i6att="lastUpdate">Timestamp</th>
+		</tr>
+	</thead>
+
+	<tbody id="dataPost">
+
+	</tbody>
+</table>
+
+<% block('localScripts', '<script src="https://maps.googleapis.com/maps/api/js"></script>') %>
+<% block('localScripts', '<script src="/js/tesHelper.js"></script>') %>
