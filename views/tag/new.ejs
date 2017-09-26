@@ -1,0 +1,99 @@
+<div class="title">Add Data</div>
+<form class="form-horizontal" id="form-crud" method="POST">
+	<div class="box-body">
+		<!-- Name -->
+		<div class="form-group">
+			<label for="name" class="col-sm-3 control-label">Name</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="name" placeholder="Device Name">
+			</div>
+		</div>
+		<!-- /Name -->
+
+		<!-- Device Name -->
+		<div class="form-group">
+			<label for="device" class="col-sm-3 control-label">Device</label>
+			<div class="col-sm-9">
+				<select  name="device" class="form-control select2"  placeholder="I/O Device">
+					<option >-- Select device name --</option>
+					<% devices.forEach(device=>{ %>
+					<option value="<%= device.id %>"><%= device.name %></option>
+					<% }); %>
+				</select>
+			</div>
+		</div>
+		<!-- /Device Name -->
+
+		<!-- Address -->
+		<div class="form-group">
+			<label for="address" class="col-sm-3 control-label">I/O Address</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="address" placeholder="I/O Address">
+			</div>
+		</div>
+		<!-- /Address -->
+
+		<!-- Minimum value -->
+		<div class="form-group">
+			<label for="min" class="col-sm-3 control-label">Minimum</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="min" placeholder="Minimum Value">
+			</div>
+		</div>
+		<!-- /Minimum value -->
+
+		<!-- Maximum value -->
+		<div class="form-group">
+			<label for="max" class="col-sm-3 control-label">Maximum</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="max" placeholder="Maximum Value">
+			</div>
+		</div>
+		<!-- /Maximum value -->
+
+		<!-- Minimum value -->
+		<div class="form-group">
+			<label for="lo_lim" class="col-sm-3 control-label">Limit Low</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="lo_lim" placeholder="Limit Low">
+			</div>
+		</div>
+		<!-- /Minimum value -->
+
+		<!-- Maximum value -->
+		<div class="form-group">
+			<label for="hi_lim" class="col-sm-3 control-label">Limit High</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="hi_lim" placeholder="Limit High">
+			</div>
+		</div>
+		<!-- /Maximum value -->
+
+		<!-- Maximum value -->
+		<div class="form-group">
+			<label for="eu" class="col-sm-3 control-label">Engineering Unit</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="eu" placeholder="Engineering Unit">
+			</div>
+		</div>
+		<!-- /Maximum value -->
+
+
+		<!-- Description -->
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Description</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="description" placeholder="Description">
+			</div>
+		</div>
+		<!-- /Description -->
+
+	</div>
+	<!-- /.box-body -->
+
+	<!-- Submit button -->
+	<div class="box-footer">
+		<button type="submit" class="btn btn-info pull-right">Save</button>
+	</div>
+	<!-- /.box-footer -->
+</form>

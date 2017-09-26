@@ -1,0 +1,93 @@
+<div class="title">Edit Data</div>
+<form class="form-horizontal" id="form-crud" method="PUT">
+	<input type="hidden" name="id" value="<%= model.id %>">
+	<div class="box-body">
+		<!-- Name -->
+		<div class="form-group">
+			<label for="name" class="col-sm-3 control-label">Name</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="name" placeholder="Device Name" value="<%= model.name %>">
+			</div>
+		</div>
+		<!-- /Name -->
+
+		<!-- Driver Type -->
+		<div class="form-group">
+			<label for="type" class="col-sm-3 control-label">Driver</label>
+			<div class="col-sm-9">
+				<select  name="type" class="form-control select2"  placeholder="I/O Device">
+					<option >-- Select driver type --</option>
+					<% drivers.forEach(driver=>{ %>
+					<option value="<%= driver.id %>" <%= model.type==driver.id? 'selected="selected"' : '' %>><%= driver.name %></option>
+					<% }); %>
+				</select>
+			</div>
+		</div>
+		<!-- /Driver Type -->
+
+		<!-- Host/IP Address -->
+		<div class="form-group">
+			<label for="host" class="col-sm-3 control-label">Host/IP Address</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="host" placeholder="Device IP Address" value="<%= model.host %>">
+			</div>
+		</div>
+		<!-- /Host/IP Address -->
+
+		<!-- Device Connection Port -->
+		<div class="form-group">
+			<label for="port" class="col-sm-3 control-label">Port</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="port" placeholder="Port Number" value="<%= model.port %>">
+			</div>
+		</div>
+		<!-- /Device Connection Port -->
+
+		<!-- Rack -->
+		<div class="form-group">
+			<label for="rack" class="col-sm-3 control-label">Rack</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="rack" placeholder="Rack Number" value="<%= model.rack %>">
+			</div>
+		</div>
+		<!-- /Rack -->
+
+		<!-- Slot -->
+		<div class="form-group">
+			<label for="slot" class="col-sm-3 control-label">Slot</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="slot" placeholder="Slot Number" value="<%= model.slot %>">
+			</div>
+		</div>
+		<!-- /Slot -->
+
+		<!-- Enabled -->
+		<div class="form-group">
+			<label for="enabled" class="col-sm-3 control-label">Enabled</label>
+			<div class="col-sm-9">
+				<select class="form-control select2" name="enabled" value="<%= model.enabled %>">
+					<option value="false" <%= model.enabled? '': 'selected="selected"' %>>No</option>
+					<option value="true" <%= model.enabled? 'selected="selected"' : '' %>>Yes</option>
+				</select>
+			</div>
+		</div>
+		<!-- /Enabled -->
+
+		<!-- Description -->
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Description</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="description" placeholder="Description" value="<%= model.description %>">
+			</div>
+		</div>
+		<!-- /Description -->
+
+	</div>
+	<!-- /.box-body -->
+
+	<!-- Submit button -->
+	<div class="box-footer">
+		<button type="submit" class="btn btn-info pull-right">Save</button>
+	</div>
+	<!-- /.box-footer -->
+</form>

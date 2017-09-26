@@ -27,9 +27,8 @@ module.exports = {
 			or[col.data] = {'like' : '%' + search + '%'}
 			criteria.where.or.push(or);
 		});
-		console.log(req.query);
 		var retval = {data : []}
-		Tag.find(criteria).exec((err,tags)=>{
+		Tag.find(criteria).populate('device').exec((err,tags)=>{
 			if(err){return res.ok(retval); }
 			
 			retval.data = tags;
@@ -45,6 +44,36 @@ module.exports = {
 				});
 			});
 		});
+	},
+
+	detail : function(req,res){
+		Tag.findOne({id:req.query.id}).populate('device').exec((err,tag)=>{
+			res.view({
+				model : tag,
+				layout : null
+			});
+		});
+	},
+
+	edit : function(req,res){
+		Device.find().exec((err,device)=>{
+			Tag.findOne(req.query.id).exec((err,tag)=>{
+				res.view({
+					device : device,
+					model : tag,
+					layout: null
+				})
+			});			
+		});
+	},
+	
+	new : function(req,res){		
+		Device.find().exec((err, device)=>{
+			return res.view({
+				devices : device ? device : [],
+				layout: null
+			});
+		});	
 	},
 
 	online : function(req,res){

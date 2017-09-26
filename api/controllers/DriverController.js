@@ -45,6 +45,31 @@ module.exports = {
 				});
 			});
 		});
+	},
+
+
+	detail : function(req,res){
+		Driver.findOne({id:req.query.id}).populate('device').exec((err,driver)=>{
+			res.view({
+				model : driver,
+				layout : null
+			});
+		});
+	},
+
+	edit : function(req,res){
+		Driver.findOne(req.query.id).exec((err,driver)=>{
+			res.view({
+				model : driver,
+				layout: null
+			})
+		});			
+	},
+	
+	new : function(req,res){		
+		return res.view({
+			layout: null
+		});
 	}
 	
 };

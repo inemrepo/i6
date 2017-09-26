@@ -6,11 +6,13 @@
  */
 
 module.exports = {
+
 	find : function(req,res){
 		Driver.find().exec((err,drivers)=>{
 			res.view({drivers : drivers});
 		});
 	},
+
 
 	list : function(req,res){
 		//Model.find({ where: { name: 'foo' }, skip: 20, limit: 10, sort: 'name DESC' });
@@ -47,6 +49,36 @@ module.exports = {
 			});
 		});
 	},
+
+	detail : function(req,res){
+		Device.findOne({id:req.query.id}).populate('type').exec((err,device)=>{
+			res.view({
+				model : device,
+				layout : null
+			});
+		});
+	},
+
+	edit : function(req,res){
+		Driver.find().exec((err,drivers)=>{
+			Device.findOne(req.query.id).exec((err,device)=>{
+				res.view({
+					drivers : drivers,
+					model : device,
+					layout: null
+				})
+			});			
+		});
+	},
 	
+	new : function(req,res){		
+		Driver.find().exec((err, drivers)=>{
+			return res.view({
+				drivers : drivers ? drivers : [],
+				layout: null
+			});
+		});	
+	}
+
 };
 

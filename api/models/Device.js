@@ -19,6 +19,7 @@ module.exports = {
   	},
 
     type: {
+      required : true,
       model: 'driver',
       //via: 'device',
     },

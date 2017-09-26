@@ -1,0 +1,32 @@
+<div class="title">Edit Data</div>
+<form class="form-horizontal" id="form-crud" method="PUT">
+	<input type="hidden" name="id" value="<%= model.id %>">
+	<div class="box-body">
+		<!-- Name -->
+		<div class="form-group">
+			<label for="name" class="col-sm-3 control-label">Name</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="name" placeholder="Device Name" value="<%= model.name %>">
+			</div>
+		</div>
+		<!-- /Name -->
+
+
+		<!-- Description -->
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Description</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="description" placeholder="Description" value="<%= model.description %>">
+			</div>
+		</div>
+		<!-- /Description -->
+
+	</div>
+	<!-- /.box-body -->
+
+	<!-- Submit button -->
+	<div class="box-footer">
+		<button type="submit" class="btn btn-info pull-right">Save</button>
+	</div>
+	<!-- /.box-footer -->
+</form>
