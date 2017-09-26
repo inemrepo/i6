@@ -1,9 +1,6 @@
-var automation = global.automation;
-automation.tags = {};
-var tags = automation.tags;
-
+var tags = {};
 //baca atribut tags dari database
-sails.models.tag.find().exec((err,results)=>{
+Tag.find().exec((err,results)=>{
 
 	//Jika terjadi error ketika membaca database tag
 	if(err){
@@ -20,4 +17,5 @@ sails.models.tag.find().exec((err,results)=>{
 		delete tags[name].createdAt;
 		delete tags[name].updatedAt;
 	});
+	global.automation.tags = tags;
 });

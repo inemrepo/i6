@@ -15,14 +15,34 @@ module.exports = {
   	},
 
   	device : {
-  		type : "string",
-  		required : true
+      model : "device",
+      required : true
   	},
 
   	address : {
   		type : "string",
   		required : true
   	},
+
+    description : {
+      type : "string"
+    },
+
+    min : {
+      type : "float"
+    },
+
+    max : {
+      type : "float"
+    },
+
+    lo_lim : {
+      type : "float"
+    },
+    
+    hi_lim : {
+      type : "float"
+    },
 
     value : {
       type : "string"
@@ -32,8 +52,8 @@ module.exports = {
       type : "string"
     },
 
-    lastUpdate : {
-      type : "string"
+    timestamp : {
+      column : "updatedAt"
     }
         
   }

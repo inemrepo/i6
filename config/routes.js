@@ -34,11 +34,18 @@ module.exports.routes = {
 
   '/': {
     policy : 'isAuthenticated',
-    view: 'homepage'
+    view: 'dashboard/index',
+    view: 'homepage',
+    // locals : {
+    //   layout : 'layout/layout_empty'
+    // }
   },
 
   'get /login': {
-       view: 'user/login'
+       view: 'user/login',
+       locals : {
+        layout : false
+       }
   },
 
   'post /login': 'AuthController.login',

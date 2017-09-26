@@ -2,7 +2,10 @@ var util = require('util');
 var nodeS7 = require('nodes7');
 var utils = require(__dirname + '/../utils.js');
 
-
+/**
+ * Init PLC Class
+ * @param {object} params PLC dvice parameters
+ */
 function plc(params) {
     nodeS7.call(this, {silent:true});
 
@@ -58,13 +61,18 @@ me._connectionHandler = function(err){
 		this.addItems(items);
 
 		var conn = this;
-		var i = 1;
 		setInterval(function(){
-			i = i<128?i*2 : 1;
-			conn.writeItems("Q1", i);
 			conn.readAllItems(valueReady);
 		}, 200);
 	});
+}
+
+
+//Tulis val ke addr PLC
+me.writeToDevice = function(addr, val){
+	if(this.isoConnectionState==4){
+		this.writeItems(addr, val);
+	}
 }
 
 function valueReady (err,values){
@@ -74,7 +82,7 @@ function valueReady (err,values){
 		var _tag = global.automation.tags[key];
 		var _prev = global.automation.tags[key];
 		_tag.value = err? 0 : values[key];
-		_tag.lastUpdate = new Date();
+		_tag.timestamp = new Date();
 		_tag.status = err? "BAD" : "GOOD";
 		Tag.update({name : key}, {value : _tag.value, status: _tag.status}, function(err, updated){
 			if(err){console.log(err); return;}

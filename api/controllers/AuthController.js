@@ -48,6 +48,9 @@ function _onLoginSuccess(req,res, user, info){
             user: user
         });
     }else if(postResponse=='current'){
+        if(req.session.currentPath=='/login'){
+            req.session.currentPath='/';
+        }
         res.redirect(req.session.currentPath);
         delete req.session.currentPath;
     }else if(typeof(postResponse)=='string' && _isURI(postResponse)){

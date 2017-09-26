@@ -8,6 +8,55 @@
 module.exports = {
 
   attributes: {
+  	name : {
+  		type : "string",
+  		required : true,
+    	unique: true
+  	},
+
+  	description : {
+  		type : "string"
+  	},
+
+    type: {
+      model: 'driver',
+      //via: 'device',
+    },
+
+  	host : {
+  		type : "string",
+  	},
+
+  	port : {
+  		type : "string",
+  		required : true
+  	},
+
+  	node : {
+  		type : "integer",
+  		defaultsTo : 1  		
+  	},
+
+  	rack : {
+  		type : "integer",
+  		defaultsTo : 0
+  	},
+
+  	slot : {
+  		type : "integer",
+  		defaultsTo : 1
+  	},
+
+  	enabled : {
+  		type : "boolean",
+  		defaultsTo : false
+  	},
+
+  	tag : {
+  		collection : "tag",
+  		via : "device"
+  	},
+
     toJSON: function() {
         var obj = this.toObject();
         delete obj.createdAt;

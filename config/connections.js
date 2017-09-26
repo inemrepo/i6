@@ -42,7 +42,7 @@ module.exports.connections = {
   ***************************************************************************/
   MySQL: {
     adapter: 'sails-mysql',
-    host: 'localhost:3306',
+    host: 'localhost',
     user: 'root', //optional
     password: '', //optional
     database: 'i6' //optional
@@ -56,14 +56,39 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  // someMongodbServer: {
-  //   adapter: 'sails-mongo',
-  //   host: 'localhost',
-  //   port: 27017,
-  //   user: 'username', //optional
-  //   password: 'password', //optional
-  //   database: 'your_mongo_db_name_here' //optional
-  // },
+  i6 : {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    // user: 'username', //optional
+    // password: 'password', //optional
+    database: 'i6', //optional,
+    tz : 'GMT+7'
+  },
+  datalog : {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    // user: 'username', //optional
+    // password: 'password', //optional
+     database: 'datalog' //optional
+  },
+  alarmlog : {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    // user: 'username', //optional
+    // password: 'password', //optional
+     database: 'alarmlog' //optional
+  },
+  eventlog : {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    // user: 'username', //optional
+    // password: 'password', //optional
+     database: 'eventlog' //optional
+  },
 
   /***************************************************************************
   *                                                                          *
