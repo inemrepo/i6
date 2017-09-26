@@ -23,6 +23,14 @@ $('document').ready(function(){
 		}
 	);
 
+	function showModalCRUD(uri){
+		$.get(uri, function(data, status){
+			$('#modal-crud').find(".modal-crud-content").html(data);
+			$('#modal-crud .modal-crud-title').html($('#modal-crud').find('div.title').html())
+			$('#modal-crud').find('div.title').remove();
+	    	$('#modal-crud').modal('show');
+		});
+	}
 	
 	$('table.i6-crud').DataTable( {
         "processing": true,
@@ -34,7 +42,8 @@ $('document').ready(function(){
             {
                 text: '<i class="fa fa-plus"></i>',
                 action: function ( e, dt, node, config ) {
-                    $('#modal-edit').modal('show');
+                    //$('#modal-pop').modal('show');
+                    showModalCRUD(currentpath + "/new");
                 },
                 titleAttr: 'Add new record'
             },
@@ -65,15 +74,39 @@ $('document').ready(function(){
 
 
 	$('table').on('click', 'button.detail',function() {
-		$.get(currentpath + '/' + $(this).attr('rowid'), function(data, status){
-			var keys = Object.keys(data);
-			keys.forEach(key=>{
-				$('#modal-detail').find('[i6detail="' + key +'"]').html(data[key]);
-			});
-	    	$('#modal-detail').modal('show');
-		});
+		var _id=$(this).attr('rowid');
+        showModalCRUD(currentpath + "/detail?id=" + _id);
 	});
 
+
+	$('table').on('click', 'button.edit',function() {
+		var _id=$(this).attr('rowid');
+        showModalCRUD(currentpath + "/edit?id=" + _id);
+	});
+
+
+	$(document).on('submit', '#form-crud', function(e) {
+		e.preventDefault();
+
+		var data = $(this).serialize();
+		var method = $(this).attr('method');
+		var id = $(this).find('input[name="id"]').val();
+		id = typeof(id)=='undefined' ? "" : id;
+		$.ajax({
+			url: currentpath + '/' + id,
+			type: method,
+			data : data,
+			success: function(result,status,xhr) {
+				swal('Success', "", 'success');
+	    		$('#modal-crud').modal('hide');
+				$('table').DataTable().ajax.reload();
+			},
+			error: function(result,status,error){
+				swal('Failed', "", 'error');				
+			}
+		});
+	});
+  	
 
 	$('table').on('click', 'button.delete',function() {
 		var btn = $(this);
@@ -99,38 +132,4 @@ $('document').ready(function(){
 			if (dismiss === 'cancel') {}
 		});
 	});
-
-
-	$('table').on('click', 'button.edit',function() {
-		var btn=$(this);
-		$.get(currentpath + '/' + $(this).attr('rowid'), function(data, status){
-			var keys = Object.keys(data);
-			keys.forEach(key=>{
-				$('#modal-edit').find('input[name="' + key +'"]').val(data[key]);
-			});
-			$('#modal-edit').find('form').attr('name', data.id);
-	    	$('#modal-edit').modal('show');
-		});
-	});
-
-
-	$(document).on('submit', '#form-update', function(e) {
-		e.preventDefault();
-
-		var data = $(this).serialize();
-		var id = $(this).attr('name') ? $(this).attr('name') : "";
-		$(this).removeAttr('name');
-
-		$.post(currentpath + '/' + id , data, function(data,status) {
-			$('#modal-kota-update').modal('hide');
-			if (status) {
-				swal('Success', status.msg, 'success');
-	    		$('#modal-edit').modal('hide');
-				$('table').DataTable().ajax.reload();
-			} else {
-				swal('Failed', status.msg, 'error');
-			}
-		});
-	});
-  	
 });
