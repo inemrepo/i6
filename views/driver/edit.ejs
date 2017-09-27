@@ -1,4 +1,4 @@
-<div class="title">Edit Data</div>
+<div class="title"><i class="fa fa-edit"></i> Edit Data</div>
 <form class="form-horizontal" id="form-crud" method="PUT">
 	<input type="hidden" name="id" value="<%= model.id %>">
 	<div class="box-body">
@@ -10,6 +10,15 @@
 			</div>
 		</div>
 		<!-- /Name -->
+
+		<!-- Driver Code -->
+		<div class="form-group">
+			<label for="code" class="col-sm-3 control-label">Driver Code</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="code" placeholder="Device Name" value="<%= model.code %>">
+			</div>
+		</div>
+		<!-- /Driver Code -->
 
 
 		<!-- Description -->

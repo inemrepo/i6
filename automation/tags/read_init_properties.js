@@ -8,6 +8,7 @@ Tag.find().exec((err,results)=>{
 		return;
 	}
 
+	var rt = [];
 	results.forEach(res=>{
 		var name = res.name;
 		tags[name] = res;
@@ -16,6 +17,10 @@ Tag.find().exec((err,results)=>{
 		delete tags[name].name;
 		delete tags[name].createdAt;
 		delete tags[name].updatedAt;
+		rt.push({name : res.name});
+		Runtime.destroy().exec();
+		Runtime.create(rt).exec();
 	});
 	global.automation.tags = tags;
+
 });

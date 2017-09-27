@@ -4,15 +4,15 @@
 var async = require('async');
 var utils = require(__dirname + '/../utils.js');
 var nodeS7 = require('nodes7');
-var plc = require('./devS7.js');
-//var pmlc = require('./node.js');
+var plc = require(__dirname + '/devS7.js');
 
-utils.get_devices('s7', (err,result)=>{
-		if(err){
-			return;
-		}
-		result.forEach(res=>{
-			global.automation.devices[res.name] = new plc(res);
-			global.automation.devices[res.name].connect();
+var driver = 'i6-s7IP';
+
+
+//require('./snap7.js');
+utils.get_devices(driver, (devices)=>{
+		devices.forEach(device=>{
+			global.automation.devices[devices.name] = new plc(device);
+			//global.automation.devices[devices.name].connect();
 		})
 });

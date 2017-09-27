@@ -10,21 +10,26 @@ module.exports = {
 		console.log(data);
 	},
 
+
+
 	/**
 	 * @param  {[type]}
 	 * @param  {Function}
 	 * @return {[type]}
 	 */
-	get_devices : function(type,cb){
-		sails.models.device.find({type:type}).exec((err,result)=>{
-			if(err){
-				sails.log.error('auth.device - something wrong when retrieve device data');
-				cb(err, result);
+	get_devices : function(driver,cb){
+		Driver.findOne({code:driver}).exec((err,result)=>{
+			if(err){return};
+			if(typeof(result)!=='undefined'){
+				Device.find({type : result.id}).populate('tags').exec((err,res)=>{
+					if(!err && res.length > 0){
+						cb(res);
+					}
+				});
 			}
-			cb(null, result);
-
 		});
 	},
+
 
 
 	/**
@@ -32,12 +37,12 @@ module.exports = {
 	 * @return {array object} merupakan tag yang sumber datanya dari dev
 	 */
 	get_device_tags : function(dev, cb){
-		sails.models.tag.find({device:dev}).exec((err,result)=>{
+		Tag.find({device:dev}).exec((err,result)=>{
 			if(err){
 				sails.log.error('aut.device - error when looking tag for device ' + dev);
-				cb(err);
+				return;
 			}
-			cb(null,result);
+			cb(result);
 		});
 	}
 };

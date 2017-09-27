@@ -53,9 +53,11 @@ module.exports = {
   		defaultsTo : false
   	},
 
-  	tag : {
+  	tags : {
+      // model : "tag"
   		collection : "tag",
-  		via : "device"
+  		via : "device",
+      //dominant: true
   	},
 
     toJSON: function() {

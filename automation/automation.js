@@ -1,6 +1,5 @@
 var path = require('path');
 
-
 if(typeof(global.automation)=='undefined'){
 	global.automation = {};
 }

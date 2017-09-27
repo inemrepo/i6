@@ -25,6 +25,7 @@
 
 
   <link rel="stylesheet" href="/plugins/sweetalert2/css/sweetalert2.min.css">
+  <link rel="stylesheet" href="/plugins/font-awesome-animation/font-awesome-animation.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,7 +97,7 @@
             <li class="dropdown messages-menu">
               <!-- Menu toggle button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-envelope-o"></i>
+                <i class="fa fa-envelope-o animated"></i>
                 <span class="label label-success">4</span>
               </a>
               <ul class="dropdown-menu">
@@ -154,9 +155,8 @@
             <!-- Tasks Menu -->
             <li class="dropdown tasks-menu">
               <!-- Menu Toggle Button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-flag-o"></i>
-                <span class="label label-danger">9</span>
+              <a href="#" title="Healthy" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-heartbeat faa-pulse animated"></i>
               </a>
               <ul class="dropdown-menu">
                 <li class="header">You have 9 tasks</li>
@@ -283,17 +283,6 @@
 <!-- /Modal CRUD-->
 
 
-
-  <footer class="main-footer">
-    <div class="container-fluid">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
-      </div>
-      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-      reserved.
-    </div>
-    <!-- /.container -->
-  </footer>
 </div>
 <!-- ./wrapper -->
 
@@ -310,6 +299,10 @@
 
 <!-- AdminLTE App -->
 <script src="/adm/dist/js/adminlte.min.js"></script>
+
+
+<script src="/js/dependencies/sails.io.js"></script>
+<script src="/i6/i6.socket-handler.js"></script>
 
 
 <script src="/plugins/sweetalert2/js/sweetalert2.min.js"></script>

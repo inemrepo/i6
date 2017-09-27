@@ -15,8 +15,11 @@ module.exports = {
   	},
 
   	device : {
-      model : "device",
-      required : true
+       model : "device",   
+      // collection : "device",
+      // via : "tag",
+      // dominant: true
+      //required : true   
   	},
 
   	address : {

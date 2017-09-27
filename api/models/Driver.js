@@ -12,6 +12,13 @@ module.exports = {
   		required : true,
   		unique : true
   	},
+    
+    code : {
+      type : "string",
+      required : true,
+      unique : true
+    },
+
   	description : {
   		type : "string"
   	},

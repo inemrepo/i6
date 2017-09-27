@@ -1,5 +1,3 @@
-'use strict';
-
 $('document').ready(function(){
 	var currentpath = window.location.pathname;
 
