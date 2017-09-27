@@ -1,11 +1,12 @@
-<div class="title">Add Data</div>
-<form class="form-horizontal" id="form-crud" method="POST">
+<div class="title"><i class="fa fa-edit"></i> Edit Tag</div>
+<form class="form-horizontal" id="form-crud" method="PUT">
+	<input type="hidden" name="id" value="<%= model.id %>">
 	<div class="box-body">
 		<!-- Name -->
 		<div class="form-group">
 			<label for="name" class="col-sm-3 control-label">Name</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="name" placeholder="Device Name">
+				<input type="text" class="form-control" name="name" placeholder="Device Name" value="<%= model.name %>">
 			</div>
 		</div>
 		<!-- /Name -->
@@ -17,7 +18,7 @@
 				<select  name="device" class="form-control select2"  placeholder="I/O Device">
 					<option >-- Select device name --</option>
 					<% devices.forEach(device=>{ %>
-					<option value="<%= device.id %>"><%= device.name %></option>
+					<option value="<%= device.id %>" <%= device.id==model.device ? 'selected="selected"' : ''%> ><%= device.name %></option>
 					<% }); %>
 				</select>
 			</div>
@@ -28,7 +29,7 @@
 		<div class="form-group">
 			<label for="address" class="col-sm-3 control-label">I/O Address</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="address" placeholder="I/O Address">
+				<input type="text" class="form-control" name="address" placeholder="I/O Address"  value="<%= model.address %>">
 			</div>
 		</div>
 		<!-- /Address -->
@@ -37,7 +38,7 @@
 		<div class="form-group">
 			<label for="min" class="col-sm-3 control-label">Minimum</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="min" placeholder="Minimum Value">
+				<input type="text" class="form-control" name="min" placeholder="Minimum Value" value="<%= model.min %>">
 			</div>
 		</div>
 		<!-- /Minimum value -->
@@ -46,7 +47,7 @@
 		<div class="form-group">
 			<label for="max" class="col-sm-3 control-label">Maximum</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="max" placeholder="Maximum Value">
+				<input type="text" class="form-control" name="max" placeholder="Maximum Value" value="<%= model.max %>">
 			</div>
 		</div>
 		<!-- /Maximum value -->
@@ -55,7 +56,7 @@
 		<div class="form-group">
 			<label for="lo_lim" class="col-sm-3 control-label">Limit Low</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="lo_lim" placeholder="Limit Low">
+				<input type="text" class="form-control" name="lo_lim" placeholder="Limit Low" value="<%= model.lo_lim %>">
 			</div>
 		</div>
 		<!-- /Minimum value -->
@@ -64,7 +65,7 @@
 		<div class="form-group">
 			<label for="hi_lim" class="col-sm-3 control-label">Limit High</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="hi_lim" placeholder="Limit High">
+				<input type="text" class="form-control" name="hi_lim" placeholder="Limit High" value="<%= model.hi_lim %>">
 			</div>
 		</div>
 		<!-- /Maximum value -->
@@ -73,7 +74,7 @@
 		<div class="form-group">
 			<label for="eu" class="col-sm-3 control-label">Engineering Unit</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="eu" placeholder="Engineering Unit">
+				<input type="text" class="form-control" name="eu" placeholder="Engineering Unit" value="<%= model.eu %>">
 			</div>
 		</div>
 		<!-- /Maximum value -->
@@ -83,7 +84,7 @@
 		<div class="form-group">
 			<label for="description" class="col-sm-3 control-label">Description</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="description" placeholder="Description">
+				<input type="text" class="form-control" name="description" placeholder="Description" value="<%= model.description %>">
 			</div>
 		</div>
 		<!-- /Description -->

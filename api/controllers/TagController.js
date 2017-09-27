@@ -56,10 +56,10 @@ module.exports = {
 	},
 
 	edit : function(req,res){
-		Device.find().exec((err,device)=>{
+		Device.find().exec((err,devices)=>{
 			Tag.findOne(req.query.id).exec((err,tag)=>{
 				res.view({
-					device : device,
+					devices : devices,
 					model : tag,
 					layout: null
 				})
