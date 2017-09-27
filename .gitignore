@@ -79,6 +79,7 @@ assets/adm
 # tasks and adapters.
 ################################################
 #.tmp
+.tmp/public/adm
 dump.rdb
 
 
