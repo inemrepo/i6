@@ -1,0 +1,676 @@
+{
+  "data": {
+    "chat": [
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T22:46:10.178Z",
+        "updatedAt": "2017-09-17T22:46:10.178Z",
+        "id": 1
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T22:46:17.181Z",
+        "updatedAt": "2017-09-17T22:46:17.181Z",
+        "id": 2
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:06.198Z",
+        "updatedAt": "2017-09-17T23:32:06.198Z",
+        "id": 3
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:06.865Z",
+        "updatedAt": "2017-09-17T23:32:06.865Z",
+        "id": 4
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:07.126Z",
+        "updatedAt": "2017-09-17T23:32:07.126Z",
+        "id": 5
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:07.306Z",
+        "updatedAt": "2017-09-17T23:32:07.306Z",
+        "id": 6
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:07.470Z",
+        "updatedAt": "2017-09-17T23:32:07.470Z",
+        "id": 7
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:27.900Z",
+        "updatedAt": "2017-09-17T23:32:27.900Z",
+        "id": 8
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:28.204Z",
+        "updatedAt": "2017-09-17T23:32:28.204Z",
+        "id": 9
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:28.393Z",
+        "updatedAt": "2017-09-17T23:32:28.393Z",
+        "id": 10
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:28.559Z",
+        "updatedAt": "2017-09-17T23:32:28.559Z",
+        "id": 11
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:28.707Z",
+        "updatedAt": "2017-09-17T23:32:28.707Z",
+        "id": 12
+      },
+      {
+        "title": "er",
+        "slug": "ert",
+        "createdAt": "2017-09-17T23:32:28.862Z",
+        "updatedAt": "2017-09-17T23:32:28.862Z",
+        "id": 13
+      },
+      {
+        "title": "er",
+        "msg": "",
+        "createdAt": "2017-09-18T01:21:35.877Z",
+        "updatedAt": "2017-09-18T01:21:35.877Z",
+        "id": 14
+      },
+      {
+        "title": "er",
+        "msg": "ds",
+        "createdAt": "2017-09-18T01:21:38.414Z",
+        "updatedAt": "2017-09-18T01:21:38.414Z",
+        "id": 15
+      },
+      {
+        "title": "er",
+        "msg": "ds",
+        "createdAt": "2017-09-18T01:21:38.955Z",
+        "updatedAt": "2017-09-18T01:21:38.955Z",
+        "id": 16
+      },
+      {
+        "title": "er",
+        "msg": "ds",
+        "createdAt": "2017-09-18T01:21:39.188Z",
+        "updatedAt": "2017-09-18T01:21:39.188Z",
+        "id": 17
+      },
+      {
+        "title": "er",
+        "msg": "ds",
+        "createdAt": "2017-09-18T01:21:39.383Z",
+        "updatedAt": "2017-09-18T01:21:39.383Z",
+        "id": 18
+      },
+      {
+        "title": "er",
+        "msg": "ds",
+        "createdAt": "2017-09-18T01:21:39.579Z",
+        "updatedAt": "2017-09-18T01:21:39.579Z",
+        "id": 19
+      }
+    ],
+    "device": [
+      {
+        "name": "PLC1",
+        "type": "s7",
+        "host": "192.168.1.20",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "id": 1,
+        "createdAt": "2017-09-19T01:47:37.219Z",
+        "updatedAt": "2017-09-19T01:47:37.219Z"
+      }
+    ],
+    "i6alarmlog": [],
+    "i6eventlog": [],
+    "i6taglog": [],
+    "post": [
+      {
+        "name": "wewewes",
+        "createdAt": "2017-09-19T12:04:46.103Z",
+        "updatedAt": "2017-09-19T12:54:00.680Z",
+        "id": 53
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:46.275Z",
+        "updatedAt": "2017-09-19T12:04:46.275Z",
+        "id": 54
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:46.442Z",
+        "updatedAt": "2017-09-19T12:04:46.442Z",
+        "id": 55
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:46.592Z",
+        "updatedAt": "2017-09-19T12:04:46.592Z",
+        "id": 56
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:47.150Z",
+        "updatedAt": "2017-09-19T12:04:47.150Z",
+        "id": 57
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:47.325Z",
+        "updatedAt": "2017-09-19T12:04:47.325Z",
+        "id": 58
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:47.509Z",
+        "updatedAt": "2017-09-19T12:04:47.509Z",
+        "id": 59
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:47.700Z",
+        "updatedAt": "2017-09-19T12:04:47.700Z",
+        "id": 60
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:47.859Z",
+        "updatedAt": "2017-09-19T12:04:47.859Z",
+        "id": 61
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:48.020Z",
+        "updatedAt": "2017-09-19T12:04:48.020Z",
+        "id": 62
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:48.214Z",
+        "updatedAt": "2017-09-19T12:04:48.214Z",
+        "id": 63
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:48.421Z",
+        "updatedAt": "2017-09-19T12:04:48.421Z",
+        "id": 64
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:48.611Z",
+        "updatedAt": "2017-09-19T12:04:48.611Z",
+        "id": 65
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:48.812Z",
+        "updatedAt": "2017-09-19T12:04:48.812Z",
+        "id": 66
+      },
+      {
+        "name": "trrtrtrt",
+        "createdAt": "2017-09-19T12:04:48.993Z",
+        "updatedAt": "2017-09-19T12:54:08.584Z",
+        "id": 67
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:49.203Z",
+        "updatedAt": "2017-09-19T12:04:49.203Z",
+        "id": 68
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:04:49.330Z",
+        "updatedAt": "2017-09-19T12:04:49.330Z",
+        "id": 69
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:07.788Z",
+        "updatedAt": "2017-09-19T12:05:07.788Z",
+        "id": 70
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.006Z",
+        "updatedAt": "2017-09-19T12:05:08.006Z",
+        "id": 71
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.187Z",
+        "updatedAt": "2017-09-19T12:05:08.187Z",
+        "id": 72
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.373Z",
+        "updatedAt": "2017-09-19T12:05:08.373Z",
+        "id": 73
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.535Z",
+        "updatedAt": "2017-09-19T12:05:08.535Z",
+        "id": 74
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.699Z",
+        "updatedAt": "2017-09-19T12:05:08.699Z",
+        "id": 75
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:08.873Z",
+        "updatedAt": "2017-09-19T12:05:08.873Z",
+        "id": 76
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:09.034Z",
+        "updatedAt": "2017-09-19T12:05:09.034Z",
+        "id": 77
+      },
+      {
+        "name": "Jangana",
+        "createdAt": "2017-09-19T12:05:09.371Z",
+        "updatedAt": "2017-09-19T12:05:09.371Z",
+        "id": 79
+      }
+    ],
+    "realtime": [],
+    "rt_tag": [],
+    "say": [],
+    "tag": [
+      {
+        "name": "SO2",
+        "device": "PLC1",
+        "address": "DB10,REAL0",
+        "createdAt": "2017-09-19T02:16:28.277Z",
+        "updatedAt": "2017-09-24T13:29:47.176Z",
+        "id": 1,
+        "value": "3",
+        "status": "GOOD"
+      },
+      {
+        "name": "NOX",
+        "device": "PLC1",
+        "address": "DB10,REAL4",
+        "createdAt": "2017-09-19T02:16:51.882Z",
+        "updatedAt": "2017-09-24T13:29:47.182Z",
+        "id": 2,
+        "value": "4545.4599609375",
+        "status": "GOOD"
+      },
+      {
+        "name": "CO",
+        "device": "PLC1",
+        "address": "DB10,REAL8",
+        "createdAt": "2017-09-19T02:16:58.288Z",
+        "updatedAt": "2017-09-24T13:29:47.187Z",
+        "id": 3,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "O2",
+        "device": "PLC1",
+        "address": "DB10,REAL12",
+        "createdAt": "2017-09-19T02:17:05.877Z",
+        "updatedAt": "2017-09-24T13:29:47.193Z",
+        "id": 4,
+        "value": "3333",
+        "status": "GOOD"
+      },
+      {
+        "name": "CO2",
+        "device": "PLC1",
+        "address": "DB10,REAL16",
+        "createdAt": "2017-09-19T02:17:15.906Z",
+        "updatedAt": "2017-09-24T13:29:47.198Z",
+        "id": 5,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "Dust",
+        "device": "PLC1",
+        "address": "DB10,REAL20",
+        "createdAt": "2017-09-19T02:17:28.066Z",
+        "updatedAt": "2017-09-24T13:29:47.201Z",
+        "id": 6,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "Opacity",
+        "device": "PLC1",
+        "address": "DB10,REAL24",
+        "createdAt": "2017-09-19T02:17:40.820Z",
+        "updatedAt": "2017-09-24T13:29:47.204Z",
+        "id": 7,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "Pressure",
+        "device": "PLC1",
+        "address": "DB10,REAL28",
+        "createdAt": "2017-09-19T02:17:59.630Z",
+        "updatedAt": "2017-09-24T13:29:47.207Z",
+        "id": 8,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "Temperature",
+        "device": "PLC1",
+        "address": "DB10,REAL32",
+        "createdAt": "2017-09-19T02:18:09.827Z",
+        "updatedAt": "2017-09-24T13:29:47.209Z",
+        "id": 9,
+        "value": "0",
+        "status": "GOOD"
+      },
+      {
+        "name": "Flowrate",
+        "device": "PLC1",
+        "address": "DB10,REAL36",
+        "createdAt": "2017-09-19T02:18:22.270Z",
+        "updatedAt": "2017-09-24T13:29:47.212Z",
+        "id": 10,
+        "value": "1010",
+        "status": "GOOD"
+      },
+      {
+        "name": "Q1",
+        "device": "PLC1",
+        "address": "QB0",
+        "createdAt": "2017-09-19T13:52:31.908Z",
+        "updatedAt": "2017-09-24T13:29:47.170Z",
+        "id": 11,
+        "value": "6",
+        "status": "GOOD"
+      }
+    ],
+    "tag_online": [],
+    "user": [
+      {
+        "email": "admin@i6q.com",
+        "password": "$2a$10$J.TdTBKbyAngBz4qkp3Nvu0TDVdYcJe0Ms24C5uAj2K1/Ftlbfqf.",
+        "createdAt": "2017-09-16T00:56:58.103Z",
+        "updatedAt": "2017-09-16T00:56:58.103Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "chat": {
+      "title": {
+        "type": "string"
+      },
+      "msg": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "device": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "i6alarmlog": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "i6eventlog": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "i6taglog": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "post": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "realtime": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "rt_tag": {
+      "name": {
+        "type": "string"
+      },
+      "value": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "say": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "tag": {
+      "name": {
+        "type": "string",
+        "unique": true
+      },
+      "device": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "value": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "lastUpdate": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "tag_online": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "fullname": {
+        "type": "string"
+      },
+      "nickname": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    },
+    "post": {
+      "id": 84
+    },
+    "chat": {
+      "id": 19
+    },
+    "say": {},
+    "device": {
+      "id": 2
+    },
+    "tag": {
+      "id": 11
+    },
+    "realtime": {},
+    "rt_tag": {},
+    "tag_online": {},
+    "i6alarmlog": {},
+    "i6eventlog": {},
+    "i6taglog": {}
+  }
+}
