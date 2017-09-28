@@ -9,10 +9,14 @@ var plc = require(__dirname + '/devS7.js');
 var driver = 'i6-s7IP';
 
 
-//require('./snap7.js');
 utils.get_devices(driver, (devices)=>{
-		devices.forEach(device=>{
+	var interval = 1000;
+	var deviceIx = 1;	
+	devices.forEach(device=>{
+		setTimeout(function(){
 			global.automation.devices[devices.name] = new plc(device);
-			//global.automation.devices[devices.name].connect();
-		})
+			global.automation.devices[devices.name].connect();			
+		}, interval * deviceIx);
+		deviceIx++;
+	});
 });

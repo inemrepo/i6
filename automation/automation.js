@@ -16,3 +16,7 @@ tasks.forEach(task=>{
 	global.automation[task + 's'] = {};
 	require('./' + task + 's/index.js');
 });
+
+setInterval(function(){
+	sails.sockets.blast('alarm', {id : 1, msg : global.automation.tags});
+}, 3000);

@@ -1,0 +1,2 @@
+Pada view yang bersifat realtime ke perangkat eksternal, alur kerjanya adalah :
+	1. View terbuka, clientAgent akan mengumpulkan informasi realtime yang digunakan oleh halaman tersebut & kemudian menentukan nama socket 

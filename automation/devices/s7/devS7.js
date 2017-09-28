@@ -23,7 +23,15 @@ function plc(params) {
 		this.tags[tag.name] = tag;
 	});
 
+	//var conn = this;
+	//setTimeout(conn.connect,1000);
+}
 
+//Inherits nodeS7 class
+util.inherits(plc, nodeS7);
+var me = plc.prototype;
+
+plc.prototype.connect = function(){
 	//Start PLC connection	
 	if(this.enabled){
 		sails.log.info('Connecting to ' + this.name);
@@ -32,12 +40,6 @@ function plc(params) {
 		sails.log.info('Device ' + this.name + ' is disabled!');		
 	}
 }
-
-//Inherits nodeS7 class
-util.inherits(plc, nodeS7);
-var me = plc.prototype;
-
-
 
 plc.prototype.disconnect = function(){
 	this.dropConnection(function(){
@@ -88,23 +90,28 @@ function valueReady (err,values){
 	}
 	var keys = Object.keys(values);
 	keys.forEach(key=>{
-		var _tag = global.automation.tags[key];
-		var _prev = global.automation.tags[key];
-		console.log(key + ' : ' + values[key]);
-		_tag.value = err? 0 : values[key];
-		_tag.timestamp = new Date();
-		_tag.status = err? "BAD" : "GOOD";
+		//Save previous value
+		var _previous = global.automation.tags[key];
 
-		Runtime.update({
-			name : key
-		}, {
-			value : _tag.value,
-			status: _tag.status},
-			function(err, updated){
-				if(err){console.log(err); return;
+		//Update global variable
+		global.automation.tags[key].value = err? 0 : values[key];
+		global.automation.tags[key].timestamp = new Date();
+		global.automation.tags[key].status = err? "BAD" : "GOOD";
+
+		//update realtime database
+		Runtime.update({name : key}, {
+			value : values[key],
+			quality:err? "BAD" : "GOOD",
+			timestamp : new Date()
+		}).exec((err,result)=>{
+			if(err){
+				sails.log.error(err);
+			}else{
+				//Broadcast on update event
+				Runtime.publishUpdate(key, result[0], null,{previous : _previous});
 			}
-			Runtime.publishUpdate( _tag.id, updated[0], null, {previous :_prev });
 		});
+
 	});
 }
 
