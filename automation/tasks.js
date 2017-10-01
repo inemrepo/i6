@@ -4,5 +4,6 @@
 module.exports.tasks = [
 	//'messenger',
 	'tag',
-	'device'
+	'device',
+	//'socket'
 ]

@@ -1,0 +1,37 @@
+<!--
+	Local helpers
+-->
+<% block('localCSS', '<link rel="stylesheet" href="/plugins/datatables/datatables.min.css">') %>
+<% block('localScripts', '<script src="/plugins/datatables/datatables.min.js"></script>') %>
+<% block('localScripts', '<script src="/i6/i6.crud.js"></script>') %>
+
+<div class="row">
+    <% model.forEach(function(row){ %>
+	<div class="col-md-2">
+        <div class="box box-primary">
+            <div class="box-body box-profile">
+                <img class="profile-user-img img-responsive img-circle" src="adm/dist/img/user1-128x128.jpg" alt="User profile picture">
+
+                <h3 class="profile-username text-center"><%= row.username %></h3>
+
+
+                <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                    <b>Email</b> <a class="pull-right"><%= row.email %></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Level</b> <a class="pull-right"><%= row.securitylevel %></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Description</b> <a class="pull-right"><%= row.description %></a>
+                </li>
+                </ul>
+
+            </div>
+            <!-- /.box-body -->
+            </div>
+    </div>
+    <% }) %>
+</div>
+
+

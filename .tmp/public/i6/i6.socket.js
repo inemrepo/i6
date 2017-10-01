@@ -3,8 +3,6 @@
 var i6tags = [];
 
 $('document').ready(function(){
-  console.log('~# i6.socket loaded');
-
   collectUsedTags();
 
 });
@@ -30,12 +28,11 @@ function collectUsedTags(){
 io.socket.on('connect', function(){
   //On socket connected to server, if tags used, join to the some room
   if(i6tags.length>0){
-    console.log('JOIN');
     // io.socket.get('/runtime/join',{data : "34"}, function(resData,jwres){});
     io.socket.request({
       method : 'GET',
       url : '/runtime/join',
-      data : {payload : i6tags}
+      data : {tags : i6tags}
     }, function(resData, jwres){
 
     });
@@ -46,6 +43,14 @@ io.socket.on('connect', function(){
 
 
 //event received
-io.socket.on('update', function(payload){
-  console.log(payload);
+io.socket.on('updateTags', function(tags){
+  tags.forEach(function(tag){
+    var keys = Object.keys(tag);
+    keys.forEach(key=>{
+      $('[i6-tag="'+ tag.name +'"][i6-prop="'+ key +'"]').html(tag[key]);
+      console.log('[i6-tag="'+ tag.name +'",i6-prop="'+ key +'"]');
+    });
+    console.log(tag.name + ' : ' + tag.value);
+    console.log(tag.name + ' : ' + tag.description);
+  });
 });

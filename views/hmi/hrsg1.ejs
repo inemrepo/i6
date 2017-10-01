@@ -1,0 +1,473 @@
+<style type="text/css">
+  #g1, #g2, #g3, #g4, #g5, #g6, #g7, #g8, #g9, #g10 {
+      width:165px; height:135px;
+      display: inline-block;
+  }
+
+  .btn-8x1{
+      border-radius: 3px;
+      position: relative;
+      padding: 15px 0px 15px 0px;
+      margin: 0 0 10px 12px;
+      min-width: 80px;
+      height: 55px;
+      text-align: center;
+      color: #666;
+      border: 1px solid #ddd;
+      background-color: #FFFFFF;
+      font-size: 13px;
+      font-family: Helvetica,Arial,sans-serif;
+  }
+
+  .box-140-100{
+      height: 140px;
+      width: 100%;
+      display: block;
+  }
+
+  .box-250-100{
+      height: 250px;
+      width: 100%;
+      display: block;
+  }
+
+  .box-260-100{
+      height: 260px;
+      width: 100%;
+      display: block;
+  }
+
+  .layout{
+      margin-left: 3px;
+      margin-right: 3px;
+  }
+
+  .margin-top-10{
+      margin-top: 10px;
+      margin-bottom: 0px;
+  }
+
+  .margin-top-8{
+      margin-top: 8px;
+  }
+
+  .margin-top-5{
+      margin-top: 5px;
+  }
+
+  .margin-button-10{
+      margin-bottom: 10px;
+  }
+
+  .margin-button-15{
+      margin-bottom: 15px;
+  }
+  .margin-button-0{
+      margin-bottom: 0px;
+  }
+
+  .margin-right-30{
+      margin-right: 30px;
+  }
+
+  .padding-left-200{
+      padding-left: 330px;
+  }
+
+  .padding-buttom-0{
+      padding-top: 14px;
+      padding-bottom: 0px;
+  }
+
+  .padding-side-10{
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .padding-top-5{
+      padding-top: 5px;
+  }
+
+  .padding-15-7{
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+  .title{
+      height:21px;
+      text-align:center;
+      font-family:Helvetica,Arial,sans-serif;
+      color: #F5F5F5;
+  }
+</style>
+
+<div class="row layout">
+  <div class="row">
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>Opacity</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-12 col-md-6 no-padding">
+            <div class="box-solid">
+              <div id="g1" class="gauge"></div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>Particulate</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g2" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>Flow Gas</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g3" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>Nox</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g4" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>SO2</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g5" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>CO</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g6" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>CO2</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g7" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 padding-side-10">
+      <div class="box box-primary margin-button-10">
+        <div class="box-header with-border">
+          <b>O2</b>
+        </div>
+        <div class="box-body box-140-100 no-padding">
+          <div class="col-sm-6 no-padding">
+            <div id="g8" class="gauge"></div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <ul class="nav nav-stacked">
+              <li class="padding-15-7"><b>Yesterday:</b></li>
+              <li class="padding-15-7">High<span class="pull-right badge bg-blue">31</span></a></li>
+              <li class="padding-15-7">Avg<span class="pull-right badge bg-aqua">5</span></a></li>
+              <li class="padding-15-7">Low<span class="pull-right badge bg-green">12</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 padding-side-10">
+      <div class="box box-primary margin-top-10">
+        <div class="box-header with-border">
+          <i class="fa fa-line-chart"></i>
+          <h3 class="box-title">Interactive Area Chart</h3>
+        </div>
+        <div class="box-body">
+          <div class="col-sm-9" id="interactive" style="height: 230px;"></div>
+          <div class="col-sm-3">
+            <div class="box box-solid margin-top-8 margin-button-0" style="height: 200px;">
+              <a href="" class="btn btn-8x1 margin-top-8">Opacity</a>
+              <a href="" class="btn btn-8x1 margin-top-8">Particulate</a>
+              <a href="" class="btn btn-8x1 margin-top-8">Flow Gas</a>
+              <a href="" class="btn btn-8x1">Nox</a>
+              <a href="" class="btn btn-8x1">SO2</a>
+              <a href="" class="btn btn-8x1">CO</a>
+              <a href="" class="btn btn-8x1">CO2</a>
+              <a href="" class="btn btn-8x1">O2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function chartJs(){
+    $(function () {
+      /*
+      * Flot Interactive Chart
+      * -----------------------
+      */
+      // We use an inline data source in the example, usually data would
+      // be fetched from a server
+      var data = [], totalPoints = 100
+      function getRandomData() {
+        if (data.length > 0)
+          data = data.slice(1)
+        // Do a random walk
+        while (data.length < totalPoints) {
+          var prev = data.length > 0 ? data[data.length - 1] : 50,
+              y    = prev + Math.random() * 10 - 5
+          if (y < 0) {
+            y = 0
+          } else if (y > 100) {
+            y = 100
+          }
+          data.push(y)
+        }
+        // Zip the generated y values with the x values
+        var res = []
+        for (var i = 0; i < data.length; ++i) {
+          res.push([i, data[i]])
+        }
+        return res
+      }
+      var epochT = (new Date).getTime();
+      var interactive_plot = $.plot('#interactive', [getRandomData()], {
+        grid  : {
+          borderColor: '#f3f3f3',
+          borderWidth: 1,
+          tickColor  : '#f3f3f3'
+        },
+        series: {
+          shadowSize: 0, // Drawing is faster without shadows
+          color     : '#3c8dbc'
+        },
+        lines : {
+          fill : true, //Converts the line chart to area chart
+          color: '#3c8dbc'
+        },
+        yaxis : {
+          min : 0,
+          max : 100,
+          show: true
+        },
+        xaxis : {
+          min : 0,
+          max : 60,
+          show: true
+        }
+      });
+      var updateInterval = 500 //Fetch data ever x milliseconds
+      var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
+      function update() {
+        interactive_plot.setData([getRandomData()])
+        // Since the axes don't change, we don't need to call plot.setupGrid()
+        interactive_plot.draw()
+        if (realtime === 'on')
+          setTimeout(update, updateInterval)
+      }
+      //INITIALIZE REALTIME DATA FETCHING
+      if (realtime === 'on') {
+        update()
+      }
+      /*
+      * END INTERACTIVE CHART
+      */
+    });
+    function labelFormatter(label, series) {
+      return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+        + label
+        + '<br>'
+        + Math.round(series.percent) + '%</div>'
+    }
+  }
+function gauge(){
+    
+  (function($){
+    function panel_code(obj){
+      var _html= '<div class="col-sm-3 padding-side-10">';
+      _html += '<div class="box box-primary margin-button-10">';
+      _html += '<div class="box-header with-border">';
+      _html += '<b>Opacity</b>';
+      _html += '</div>';
+      _html += '<div class="box-body box-140-100 no-padding">';
+      _html += '<div class="col-sm-6 no-padding">';
+      _html += '<div id="gauge_' + obj.id +'" class="gauge"></div>';
+      _html += '</div>';
+      _html += '<div class="col-sm-6 no-padding">';
+      _html += '<ul class="nav nav-stacked">';
+      _html += '<li class="padding-15-7"><b>Yesterday:</b></li>';
+      _html += '<li class="padding-15-7">High<span class="pull-right badge bg-blue" i6value="" ></span></a></li>';
+      _html += '<li class="padding-15-7">Avg<span class="pull-right badge bg-aqua" i6value="" ></span></a></li>';
+      _html += '<li class="padding-15-7">Low<span class="pull-right badge bg-green" i6value="" ></span></a></li>';
+      _html += '</ul>';
+      _html += '</div>';
+      _html += '</div>';
+      _html += '</div>';
+      _html += '</div>';
+      return _html
+    }
+    $.fn.i6panel = function(){
+      var _obj = {
+        id : $(this).attr('id'),
+        unit : $(this).attr('id'),
+        value : $(this).attr('id'),
+        min : $(this).attr('id'),
+        max : $(this).attr('id'),
+        avg : $(this).attr('id')
+      }
+      $(this).html(panel_code(_obj));
+    }
+  })(jQuery);
+  
+    $('.paneli6').i6panel();
+  //  $('.paneli6').forEach(pnl=>{
+  //    draw_panel(pnl.attr('id'));
+  //  });
+    var gauges = {};
+    $('div.gauge').each(function(){
+      var _id = $(this).attr('id');
+      var _max = $(this).attr('g-max');
+      var _gauge = new JustGage({
+          id: _id,
+          title: "Unit",
+          value: 16,
+          min: 0,
+          max: _max || 100,
+          pointer: true,
+          gaugeWidthScale: 0.4,
+          customSectors: [{
+              color: '#DA1D17',
+              lo: 0,
+              hi: 30
+          }, {
+              color: '#FEEF18',
+              lo: 30,
+              hi: 40
+          }, {
+              color: '#039547',
+              lo: 40,
+              hi: 60
+          }, {
+              color: '#FEEF18',
+              lo: 60,
+              hi: 70
+          }, {
+              color: '#DA1D17',
+              lo: 70,
+              hi: 100
+          }],
+          valueFontColor: "black",
+          fontColor: "black",
+          titlePosition: "below",
+          titleFontColor: "black",
+      });
+      gauges[_id] = _gauge;
+    });
+    var listGauges = Object.keys(gauges);
+    console.log(listGauges);
+    console.log(gauges);
+    setInterval(function(){
+        listGauges.forEach(function(key){
+            gauges[key].refresh(getRandomInt(0, 100));
+        });
+    }, 1000);
+  }
+</script>
