@@ -18,15 +18,15 @@ module.exports.bootstrap = function(cb) {
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   sails.on('lifted', function() {
-    // Your post-lift startup code here
-	
-	/*
-	 Automation task
-	 Start automation task after sails lifted
-	*/
-	var root_directory = process.cwd();
-	require(path.join(root_directory, 'automation', 'automation.js'));
-
+      // Your post-lift startup code here
+    
+    /*
+    Automation task
+    Start automation task after sails lifted
+    */
+	  var root_directory = process.cwd();
+	  require(path.join(root_directory, 'automation', 'automation.js'));
+    sails.moment = require('moment'); 
   });
   cb();
   //cb();

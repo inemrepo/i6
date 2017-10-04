@@ -90,6 +90,15 @@ module.exports.connections = {
      database: 'eventlog' //optional
   },
 
+  historian : {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    // user: 'username', //optional
+    // password: 'password', //optional
+    database: 'historian' //optional
+  },
+
   /***************************************************************************
   *                                                                          *
   * PostgreSQL is another officially supported relational database.          *

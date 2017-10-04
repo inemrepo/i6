@@ -1,0 +1,209 @@
+<% block('localCSS', '<link rel="stylesheet" href="/plugins/datatables/datatables.min.css">') %>
+<% block('localScripts', '<script src="/plugins/datatables/datatables.min.js"></script>') %>
+
+<!-- FLOT CHARTS -->
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<% block('localScripts', '<script src="/adm/bower_components/Flot/jquery.flot.js"></script>') %>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<% block('localScripts', '<script src="/adm/bower_components/Flot/jquery.flot.resize.js"></script>') %>
+<% block('localScripts', '<script src="/adm/bower_components/Flot/jquery.flot.time.js"></script>') %>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<% block('localScripts', '<script src="/adm/bower_components/Flot/jquery.flot.categories.js"></script>') %>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<% block('localScripts', '<script src="/adm/bower_components/Flot/jquery.flot.cursor.js"></script>') %>
+
+<script>
+function onViewLoaded(){
+    /*global jQuery, $*/
+    /*jshint browser: true*/
+
+    $(function () {
+        'use strict';
+        var plot;
+        var offset = 0.0;
+        var sin = [],
+            cos = [];
+
+        function updateData() {
+            sin = [];
+            cos = [];
+            offset += 0.025;
+            for (var i = 0; i < 8; i += 0.01) {
+                sin.push([i, 1 + Math.sin(i + offset)]);
+                cos.push([i, 1 + Math.cos(i + offset)]);
+            }
+        }
+
+        function updateChart() {
+            setTimeout(updateChart, 16);
+
+            if ($('#checkbox').prop('checked')) {
+                updateData();
+
+                plot.setData([
+                    {
+                        data: sin,
+                        label: "sin(x)"
+                    },
+                    {
+                        data: cos,
+                        label: "cos(x)"
+                    }
+
+                ]);
+
+                plot.setupGrid();
+                plot.draw();
+            }
+        }
+
+        updateData();
+        plot = $.plot("#placeholder", [
+            {
+                data: sin,
+                label: "sin(x)"
+            },
+            {
+                data: cos,
+                label: "cos(x)"
+            }
+        ], {
+            series: {
+                lines: {
+                    show: true
+                }
+            },
+            cursors: [
+                {
+                    name: 'Red cursor',
+                    mode: 'x',
+                    color: 'red',
+                    showIntersections: false,
+                    showLabel: true,
+                    symbol: 'triangle',
+                    position: {
+                        relativeX: 0.75,
+                        relativeY: 0.5
+                    }
+                },
+                {
+                    name: 'Blue cursor',
+                    mode: 'xy',
+                    color: 'blue',
+                    showIntersections: false,
+                    snapToPlot: -1,
+                    symbol: 'diamond',
+                    position: {
+                        relativeX: 0.5,
+                        relativeY: 0.5
+                    }
+                },
+                {
+                    name: 'Green cursor',
+                    mode: 'y',
+                    color: 'green',
+                    showIntersections: false,
+                    symbol: 'cross',
+                    showLabel: true,
+                    showValues: true,
+                    fontSize: '10px',
+                    fontStyle: 'italic',
+                    position: {
+                        relativeX: 0.25,
+                        relativeY: 0.25
+                    }
+                }
+            ],
+            grid: {
+                hoverable: true,
+                clickable: true,
+                autoHighlight: false
+            },
+            yaxis: {
+                min: -5,
+                max: 5,
+                autoscale: 'exact'
+            },
+            zoom: {
+                interactive: true
+            },
+            pan: {
+                interactive: true,
+                enableTouch: true
+            }
+        });
+
+        $("#placeholder").bind("cursorupdates", function (event, cursordata) {
+            $('#hoverdata').empty();
+            var ul1 = $('#hoverdata').append('<UL style="padding-left: 30px;">').find("UL");
+            cursordata.forEach(function (cursor) {
+                ul1.append("<LI>" + cursor.cursor + "</LI>");
+                var ul2 = ul1.append('<UL style="padding-left: 30px;">').find("UL").last();
+                cursor.points.forEach(function (point) {
+                    var x, y;
+                    if (cursor.target.mode === 'xy') {
+                        x = point.x.toFixed(4);
+                        y = point.y.toFixed(4);
+                    } else if (cursor.target.mode === 'x') {
+                        x = cursor.x.toFixed(4);
+                        y = point.y.toFixed(4);
+                    }
+                    else if (cursor.target.mode === 'y') {
+                        x = point.x.toFixed(4);
+                        y = cursor.y.toFixed(4);
+                    }
+                    ul2.append("<LI> x:" + x + " y: " + y + "</LI>");
+                });
+            });
+        });
+
+        updateChart();
+    });
+}
+</script>
+
+
+<input id="checkbox" type="checkbox" name="Dynamic data" value="0" checked>Dynamic chart data
+
+<div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header">
+    
+                </div>
+                <div class="box-body">
+                    <div id="placeholder" class="demo-placeholder" style="height:400px; width:100%"></div>                    
+                </div>
+                <div class="box-footer">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Tag</th>
+                                <th>Description</th>
+                                <th>Value</th>
+                                <th>Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Sin</td>
+                                <td></td>
+                                <td class="lg0"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Cos</td>
+                                <td></td>
+                                <td class="lg1"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
