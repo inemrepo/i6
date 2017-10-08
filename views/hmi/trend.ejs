@@ -1,5 +1,12 @@
 
+<% block('localCSS', '<link rel="stylesheet" href="/plugins/datatables/datatables.min.css">') %>
+<% block('localScripts', '<script src="/plugins/datatables/datatables.min.js"></script>') %>
+
+
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/dist/jquery.flot.js"></script>') %>
+<% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.crosshair.js"></script>') %>
+<% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.time.js"></script>') %>
+<% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.resize.js"></script>') %>
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.symbol.js"></script>') %>
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.cursors.js"></script>') %>
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/lib/jquery.event.drag.js"></script>') %>
@@ -7,8 +14,6 @@
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.navigate.js"></script>') %>
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.touch.js"></script>') %>
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.touchNavigate.js"></script>') %>
-<% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.resize.js"></script>') %>
-<% block('localScripts', '<script language="javascript" type="text/javascript" src="/plugins/engineering-flot/jquery.flot.time.js"></script>') %>
 
 
 <% block('localScripts', '<script language="javascript" type="text/javascript" src="/i6/i6.trend.js"></script>') %>
@@ -41,53 +46,18 @@
         </style>
         <div class="box-footer">
             <div class="col-sm-12">
-                <h4>Legend</h4>
-            </div>
-            <div class="col-sm-12">
-                <table class="table table-striped table-bordered">
+                <table id="trend" class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>Series</th>
+                            <th>Label</th>
                             <th>Tag</th>
-                            <th>Description</th>
                             <th>Time</th>
                             <th>Value</th>
                             <th>Unit</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><input type="checkbox" class="col-sm-2"><div class="color-box-sm bg-yellow col-sm-2"></div></td>
-                            <td>Opacity</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="col-sm-2"><div class="color-box-sm bg-primary col-sm-2"></div></td>
-                            <td>Particulate</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="col-sm-2"><div class="color-box-sm bg-yellow col-sm-2"></div></td>
-                            <td>Flow Gas Stack</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="col-sm-2"><div class="color-box-sm bg-yellow col-sm-2"></div></td>
-                            <td>NOx</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
 

@@ -45,7 +45,6 @@ module.exports.getChart = function (tags, timeStart, timeEnd, limit,cb){
             responseData.push(chartData[key]);
         });
         if(typeof(cb)=='function'){cb(responseData)}   
-        console.log(JSON.stringify(criteria));
     
     })
 };
@@ -63,4 +62,4 @@ setInterval(function(){
     LoggingService.log('HRSG1_OPACITY_OUT', (Math.random() * 100));
     LoggingService.log('HRSG1_SO2_OUT', (Math.random() * 14)+20);
     LoggingService.log('HRSG1_PARTICULATE_OUT', (Math.random() * 30)+20);
-}, 1000);
+}, 5000);

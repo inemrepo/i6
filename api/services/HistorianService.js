@@ -27,7 +27,6 @@ function collector(args){
     this.enabled  = args.enabled;
     this.description = args.description;
     this.tags = args.tags;
-    this.counter = 0;
     this.start();
 }
 
@@ -45,14 +44,12 @@ collector.prototype.stop = function(){
 
 collector.prototype.cycle = function(){
     if(this.enabled){
-        this.counter++;
-        console.log('collect : ' + this.counter);
         this.collect();
         this.task = setTimeout(collector.prototype.cycle.bind(this), this.interval);
     }
 };
 
-collector.prototype.collect =function(){
+collector.prototype.individualCollect =function(){
     this.tags.forEach(tag=>{
         if(typeof(TagService[tag].value)!=='undefined'){
             var _value = TagService[tag].value
@@ -63,7 +60,7 @@ collector.prototype.collect =function(){
             }
 
             if(logThis){
-                //write data to Historian database                
+                //write data to Historian database               
                 Historian_data.create({
                     tag : tag,
                     value : _value
@@ -74,3 +71,17 @@ collector.prototype.collect =function(){
         }
     });
 };
+
+/**
+ * Simpan semua data dalam setiap 1 cycle
+ */
+collector.prototype.collect = function(){
+    
+    var toBeCollect = {};
+    this.tags.forEach(tag=>{
+        toBeCollect[tag] = TagService.tags[tag].value
+    });
+    Historian_data.create(toBeCollect).exec((err, res)=>{
+        if(err) sails.log.error('[ Historian Service ] Something error when collecting.');
+    });
+}

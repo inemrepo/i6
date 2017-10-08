@@ -1,0 +1,98 @@
+[
+  {
+    "label": "HRSG1 FLUE GAS OUTLET CO",
+    "tag": "HRSG1_CO_OUT",
+    "color": "237,194,64",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET CO2",
+    "tag": "HRSG1_CO2_OUT",
+    "color": "175,216,248",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET NOX",
+    "tag": "HRSG1_NOX_OUT",
+    "color": "203,75,75",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET SO2",
+    "tag": "HRSG1_SO2_OUT",
+    "color": "77,167,77",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET O2",
+    "tag": "HRSG1_O2_OUT",
+    "color": "148,64,237",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET OPACITY",
+    "tag": "HRSG1_OPACITY_OUT",
+    "color": "189,155,51",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET PARTICLE",
+    "tag": "HRSG1_PARTICULATE_OUT",
+    "color": "140,172,198",
+    "visible": true
+  },
+  {
+    "label": "HRSG1 FLUE GAS OUTLET FLOW STACK",
+    "tag": "HRSG1_FLOW_GAS_OUT",
+    "color": "255,0,0",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET CO",
+    "tag": "HRSG2_CO_OUT",
+    "color": "237,194,64",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET CO2",
+    "tag": "HRSG2_CO2_OUT",
+    "color": "175,216,248",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET NOX",
+    "tag": "HRSG2_NOX_OUT",
+    "color": "203,75,75",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET SO2",
+    "tag": "HRSG2_SO2_OUT",
+    "color": "77,167,77",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET O2",
+    "tag": "HRSG2_O2_OUT",
+    "color": "148,64,237",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET OPACITY",
+    "tag": "HRSG2_OPACITY_OUT",
+    "color": "189,155,51",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET PARTICLE",
+    "tag": "HRSG2_PARTICULATE_OUT",
+    "color": "140,172,198",
+    "visible": true
+  },
+  {
+    "label": "HRSG2 FLUE GAS OUTLET FLOW STACK",
+    "tag": "HRSG2_FLOW_GAS_OUT",
+    "color": "255,0,0",
+    "visible": true
+  }
+]
